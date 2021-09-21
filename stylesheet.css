@@ -1,8 +1,68 @@
 html {
-    background: black;
     color: white;
+    background: black;
 }
-
+#album-wall {
+    clear: both;
+    position: fixed;
+    z-index: -1;
+    background-image:url("spotify mosaic.png");
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    object-fit: contain;
+    min-width: 100%;
+    min-height: 100vh;
+    top: 0px;
+    filter: brightness(38%);
+    animation: slide 10s linear infinite;
+    padding: 0;
+    margin: 0;
+}
+@keyframes slide{
+    0% {
+        transform: translate3d(0,0,0);
+    }
+    100% {
+        transform: translate3d(-100%,0,0);
+    }
+}
+#album-wall, #album-wall2 {
+    clear: both;
+    position: fixed;
+    z-index: -1;
+    background-image:url("spotify mosaic.png");
+    /*background-repeat: repeat;*/
+    background-size: 100% 100%;
+    object-fit: contain;
+    min-width: 100%;
+    min-height: 100vh;
+    top: 0px;
+    filter: brightness(38%);
+    padding: 0;
+    margin: 0;
+}
+#album-wall {
+    animation: slide 60s linear infinite;
+}
+#album-wall2 {
+    animation: slide2 60s linear infinite;
+}
+@keyframes slide{
+    0% {
+        transform: translate3d(0,0,0);
+    }
+    100% {
+        transform: translate3d(-100%,0,0);
+    }
+}
+@keyframes slide2{
+    0% {
+        transform: translate3d(100%,0,0);
+    }
+    100% {
+        transform: translate3d(0,0,0);
+    }
+}
 .page-title {
     border-radius: 10px;
     text-align: center;
@@ -15,16 +75,27 @@ html {
     float: right;
     font-family: 'Nanum Myeongjo', serif;
     font-size: 600%;
-    padding: 100px 200px 0px 100px;
-    background-color:
+    padding: 50vh 0 26vh 0;
+    margin-left: 72vh;
+    margin-right: 19vh;
 }
 
 .profile {
-    width: 24%;
+    width: 325px;
     height: auto;
-    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
-
+.fixed-box-left {
+    z-index: -1;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 325px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
 h1 {
     text-align: center;
     font-size: 50px;
@@ -33,18 +104,88 @@ h1 {
 
 }
 
+.biobox {
+    right: 50px;
+}
+
 .bio {
+    display: inline;
+    float: right;
     background-color: #2d1212;
     text-align: center;
     font-size: 110%;
+    width: 79%;
+
+}
+
+.album {
+    height: auto;
+    float: right;
+    position: fixed;
+}
+
+#album2 {
+    bottom: 460px;
+    max-width: 100px;
+}
+
+#album2text {
+    bottom: 470px;
+    left: 125px;
+    width: 125px;
+}
+
+#album1 {
+    bottom: 320px;
+    max-width: 100px;
+}
+
+#album1text {
+    bottom: 330px;
+    left: 125px;
+    width: 125px;
+}
+
+#now-playing {
+    top: 320px;
+    font-size: 25px;
 }
 
 .bio-list {
-
+    text-align: left;
+    width: 400px;
 }
 
+.portfolio-link1 {
+    filter: invert(1);
+    position: fixed;
+    bottom: 0;
+    left: 5px;
 
+}
+.portfolio-link2 {
+    filter: invert(1);
+    position: fixed;
+    bottom: 0;
+    left: 45px;
 
-a {
-    font-family: 'Raleway', sans-serif;
+}
+.portfolio-link3 {
+    filter: invert(1);
+    position: fixed;
+    bottom: 0;
+    left: 85px;
+
+}
+.about {
+    color: white;
+    display: inline;
+    float:left;
+    background: #262d12;
+}
+.email {
+    filter: invert(1);
+    position: fixed;
+    bottom: 0;
+    left: 125px;
 }
